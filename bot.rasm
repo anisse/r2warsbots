@@ -1,0 +1,19 @@
+# Anisse Astier
+.arch arm
+.bits 64
+.hex 80ffff10 #adr x0, -16
+ add x1, x0, endprog
+ add x5, x1, endprog
+.hex bfc00ff1 #cmp x5, 1024 - 16
+.hex e1c3819a #csel x1, xzr, x1, gt
+ add x5, x1, endprog
+ add x4, x1, 16
+looprog:
+.hex 020cc1a9 #ldp x2, x3, [x0, 16]!
+.hex 220c81a9 #stp x2, x3, [x1, 16]!
+ cmp x1, x5
+.hex abffff54 # b.lt looprog
+ br x4
+
+endprog:
+ nop

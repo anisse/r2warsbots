@@ -1,0 +1,10 @@
+e asm.arch = arm
+e asm.bits = 64
+aei
+aeim
+
+wx `cat bot2` @ 928
+s 928
+aer PC = 928
+aer SP = SP + 100
+V!

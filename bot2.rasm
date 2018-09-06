@@ -1,0 +1,9 @@
+# Anisse Astier
+.arch arm
+.bits 64
+.hex 80000010 #adr x0, 16
+.hex 81ffff10 #adr x1, -16
+loop:
+.hex 010881a9 #stp x1, x2, [x0, 16]!
+.hex 2008bfa9 #stp x0, x2, [x1, -16]!
+.hex feffff17 #b loop

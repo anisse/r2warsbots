@@ -19,6 +19,13 @@ rasm%: bot%.rasm
 	rasm2 -f $< > $@
 	diff bot$* $<
 
+bot%.rasm: bot%
+	echo "# Anisse Astier" > $<.rasm
+	echo ".arch arm" >> $<.rasm
+	echo ".bits 64" >> $<.rasm
+	cat $< | fold -w8 | sed -e 's/^/.hex /' >> $@
+
+
 # Not working
 #runrasm%: rasm%
 #	r2 -i script malloc://1024

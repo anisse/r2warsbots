@@ -3,8 +3,8 @@ e asm.bits = 64
 aei
 aeim
 
-wx `cat bot2` @ 928
-s 928
-aer PC = 928
+wx `cat bot6` @ 64
+s 64
+aer PC = 64
 aer SP = SP + 100
 V!

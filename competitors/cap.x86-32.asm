@@ -1,0 +1,30 @@
+; the cap
+.arch x86
+.bits 32
+.hex e800000000
+.hex bbc3c3c3c3
+.hex 89d9
+.hex ba00040000
+.hex bf01c439d4
+.hex be0f4fe060
+.hex bd6060ffe4
+.hex e800000000
+.hex bc25000000
+.hex 60
+.hex bcf9030000
+.hex 60
+.hex e800000000
+.hex 89c4
+.hex 60
+.hex 60
+.hex b899000000
+.hex ffe4
+;.hex 0f4fe0
+;.hex 60
+;.hex 60
+;.hex 60
+;.hex ffe4
+;.hex 2003
+;.hex 0000
+;.hex c3
+

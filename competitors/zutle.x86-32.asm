@@ -1,0 +1,15 @@
+; zutle
+.arch x86
+.bits 32
+.hex e800000000
+.hex 5c
+.hex baffe0cccc
+.hex bb240c89e0
+.hex b96060894c
+.hex bd00006060
+.hex be05bc0004
+.hex bf83fc7f7f
+.hex 60
+.hex 894c240c
+.hex 89e0
+.hex ffe0

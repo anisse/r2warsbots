@@ -1,10 +1,16 @@
 e asm.arch = arm
 e asm.bits = 64
+e asm.flags = false
 aei
 aeim
 
-wx `cat bot6` @ 64
-s 64
-aer PC = 64
+"e cmd.esil.trap=q ; q ; q ; f theend=1"
+"e cmd.esil.intr=q  ; q ; q; f theend=1"
+"e cmd.esil.ioer=q  ; q ; q; f theend=1"
+"e cmd.esil.todo=q  ; q ; q; f theend=1"
+
+wx `cat bot6` @ 0x300
+s 0x300
+aer PC = 0x300
 aer SP = SP + 100
 V!
